@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="site.css">
+    </head>
+<body>
+    <div class="meniu">
+        <nav>
+            <div class="logo-best">
+                <img src="BLACK-BEST-Brasov_50_2_25.png" alt="logo">
+            </div>
+            <div class="toggle">
+                <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
+            </div>
+        <ul class="meniu1">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#bcd">Ce este BCD?</a></li>
+            <li><a href="#locatie">Locatie</a></li>
+            <li><a href="#noi">Despre noi</a></li>
+            <li><a href="#partener">Partener</a></li>
+            <li><a href="#echipa">Echipa</a></li>
+        </ul>
+        
+        </nav>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+        <script>
+
+            $(function(){
+                $(".toggle").on("click",function()
+                {
+                    if($(".menu1").hasClass("active")){
+                        $(".meniu1").removeClass("active");
+                        $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+                    }
+                    else
+                    {
+                        $(".meniu1").addClass("active");
+                        $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+                    }
+                })
+            })
+        </script>
+
+    </div>
+    <div class="home" >
+        <div>
+        <img src="best-modified.png">
+        </div>
+        <p>Data eveniment</p>
+        <p>Au mai ramas:</p>
+        <div class="timer">
+            <div>
+                <p id="zile">00</p>
+                <span>Zile</span>
+            </div>
+            <div>
+                <p id="ore">00</p>
+                <span>Ore</span>
+            </div>
+            <div>
+                <p id="minute">00</p>
+                <span>Minute</span>
+            </div>
+            <div>
+                <p id="secunde">00</p>
+                <span>Secunde</span>
+            </div>
+        </div>
+        <div class="form">
+            <a href="https://www.google.com">
+                Inscrie-te acum!
+            </a>
+        </div>
+    </div>
+    <div class="bcd">
+
+    </div>
+    <div class="locatie">
+
+    </div>
+    <div class="noi">
+
+    </div>
+    <div class="partener">
+        
+    </div>
+    <div class="echipa">
+        
+    </div>
+
+    <script>
+        var countDownDate = new Date("Nov 25, 2022, 00:00:00").getTime();
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            
+            var days = Math.floor(distance / (1000 * 60 * 60 *24));
+            if(days<10)
+            {
+                days="0"+days;
+            }
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            if(hours<10)
+            {
+                hours="0"+hours;
+            }
+            var minutes = Math.floor((distance % (1000 * 60 *60)) / (1000 * 60));
+            if(minutes<10)
+            {
+                minutes="0"+minutes;
+            }
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            if(seconds<10)
+            {
+                seconds="0"+seconds;
+            }
+            document.getElementById("zile").innerHTML = days;
+            document.getElementById("ore").innerHTML = hours;
+            document.getElementById("minute").innerHTML = minutes;
+            document.getElementById("secunde").innerHTML = seconds;
+        },1000)
+    </script>
+    </body>
+</html>

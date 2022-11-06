@@ -1,0 +1,89 @@
+nav{
+    background: green;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: blue ;
+}
+.logo-best{
+    flex: 1;
+}
+.logo-best img{
+    width: 10%;
+    margin-right: 0%;
+}
+.meniu1{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.meniu1 li{
+    padding: 15px 10px;
+    font-size: 16px;
+}
+.toggle{
+    font-size:30px;
+    display: none;
+}
+@media screen and (max-width:  600px){
+    nav{
+        display: block;
+        position: relative;
+        padding: 15px 20px;
+
+    }
+    .meniu1{
+        margin-top: 15px;
+        display: none;
+    }
+    .meniu1.active, .toggle{
+        display: block;
+    }
+    .toggle{
+        position: absolute;
+        top:15px;
+        right: 20px;
+    }
+}
+
+.home{
+    display: block;
+    
+    padding-left: 35%;
+    
+    padding-right: 35%;
+    
+}
+.home p{
+    padding-left: 35%;
+    
+    padding-right: 35%;
+    
+}
+.timer{
+    display: flex;
+}
+.timer div{
+    flex-basis: 100px;
+}
+.timer div p{
+    font-size: 60px;
+    margin-top: 10px;
+}
+.home{
+    background-color: #19a3b6;
+}
+.form{
+    padding-top: 10%;
+    padding-left: 33%;
+
+}
